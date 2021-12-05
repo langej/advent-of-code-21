@@ -9,6 +9,15 @@ case $day in
     "02")
         cd day-02 && node main.js && cd ..
         ;;
+    "03")
+        cd day-03 && node main.js && cd ..
+        ;;
+    "04")
+        cd day-04 && node main.mjs && cd ..
+        ;;
+    "05")
+        cd day-05 && node main.mjs && cd ..
+        ;;
     *)
         echo "not yet.."
         ;;
