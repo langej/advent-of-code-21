@@ -18,6 +18,12 @@ case $day in
     "05")
         cd day-05 && node main.mjs && cd ..
         ;;
+    "06")
+        cd day-06 && node part2.mjs && cd ..
+        ;;
+    "07")
+        cd day-07 && node main.mjs && cd ..
+        ;;
     *)
         echo "not yet.."
         ;;
