@@ -31,8 +31,8 @@ let resolveResult = (line) => {
     let [bottom] = filterSegments(nine, four.concat(top))
     let [bottomleft] = filterSegments(eight, nine)
     let [three] = signals.filter(it => filterSegments(it, one.concat(top, bottom)).length == 1)
-    let [five, fiv2] = filterByLength(5).filter(it => filterSegments(it, three.concat(bottomleft)).length==1)
-    let [six] = signals.filter(it => sameSegments(it, five.concat(bottomleft), true))
+    let [five] = filterByLength(5).filter(it => filterSegments(it, three.concat(bottomleft)).length==1)
+    let [six] = signals.filter(it => sameSegments(it, five.concat(bottomleft)))
     let [zero] = filterByLength(6).filter(it => !sameSegments(it, six) && !sameSegments(it, nine))
     let [two] = filterByLength(5).filter(it => !sameSegments(it, three) && !sameSegments(it, five))
     let all = [zero, one, two, three, four, five, six, seven, eight, nine]
