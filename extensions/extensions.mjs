@@ -20,7 +20,11 @@ Number.prototype.times = function(fn) {
     return new Array(this.valueOf()).fill(0).map((val,idx) => idx).map(fn)
 }
 
-Object.prototype.log = function(prefix) {
-    if (prefix != undefined) console.log(prefix, this.valueOf())
+Object.prototype.log = function(...prefix) {
+    if (prefix != undefined) console.log(...prefix, this.valueOf())
     else        console.log(this.valueOf())
+}
+
+Array.prototype.take = function (number) {
+    return this.valueOf().slice(0,number)
 }

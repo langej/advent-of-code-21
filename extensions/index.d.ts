@@ -1,12 +1,16 @@
 interface String {
-    readAsFile
+  readAsFile: () => string
 }
 
 interface Number {
-    to,
-    times
+  to: (num: number) => number[]
+  times: (fn: (val, idx: number, array: []) => any) => any
 }
 
 interface Object {
-    log
+  log: (...prefix: any[]) => void
+}
+
+interface Array {
+  take: (number: number) => any[]
 }
