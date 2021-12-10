@@ -1,30 +1,39 @@
 import { readFileSync } from 'fs'
 
-String.prototype.readAsFile = function() { return readFileSync(this.valueOf(), 'utf-8') }
+String.prototype.readAsFile = function () { return readFileSync(this.valueOf(), 'utf-8') }
 
-Number.prototype.to = function(number) {
+Number.prototype.to = function (number) {
     let begin = this.valueOf()
     let end = number
     let min = Math.min(begin, end)
     let max = Math.max(begin, end)
     function range(start, end) {
-        if(start === end) return [start];
+        if (start === end) return [start];
         return [start, ...range(start + 1, end)];
     }
     let r = range(min, max)
     if (begin > end) return r.reverse()
-    else             return r   
+    else return r
 }
 
-Number.prototype.times = function(fn) {
-    return new Array(this.valueOf()).fill(0).map((val,idx) => idx).map(fn)
+Number.prototype.times = function (fn) {
+    return new Array(this.valueOf()).fill(0).map((val, idx) => idx).map(fn)
 }
 
-Object.prototype.log = function(...prefix) {
+Object.prototype.log = function (...prefix) {
     if (prefix != undefined) console.log(...prefix, this.valueOf())
-    else        console.log(this.valueOf())
+    else console.log(this.valueOf())
 }
 
 Array.prototype.take = function (number) {
-    return this.valueOf().slice(0,number)
+    return this.slice(0, number)
+}
+Array.prototype.first = function () {
+    return this.slice(0, 1)
+}
+Array.prototype.last = function () {
+    return this.slice(-1, 1)
+}
+Array.prototype.rest = function () {
+    return this.slice(1)
 }

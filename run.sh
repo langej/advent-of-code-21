@@ -30,6 +30,9 @@ case $day in
     "09")
         cd day-09 && node main.mjs && cd ..
         ;;
+    "10")
+        cd day-10 && node main.mjs && cd ..
+        ;;
     *)
         echo "not yet.."
         ;;
