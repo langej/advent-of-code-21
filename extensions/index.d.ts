@@ -11,9 +11,9 @@ interface Object {
     log: (...prefix: any[]) => void
 }
 
-interface Array {
-    take: (number: number) => any[]
-    first: () => any | undefined
-    last: () => any | undefined
-    rest: () => any[]
+interface Array<T> {
+    take: (number: number) => T[]
+    first: () => T | undefined
+    last: () => T | undefined
+    rest: () => T[]
 }

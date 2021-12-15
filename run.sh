@@ -36,6 +36,9 @@ case $day in
     "11")
         cd day-11 && node main.mjs && cd ..
         ;;
+    "12")
+        cd day-12 && npm run main && cd ..
+        ;;
     *)
         echo "not yet.."
         ;;
