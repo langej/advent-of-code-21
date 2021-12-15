@@ -29,10 +29,10 @@ Array.prototype.take = function (number) {
     return this.slice(0, number)
 }
 Array.prototype.first = function () {
-    return this.slice(0, 1)[0]
+    return this[0]
 }
 Array.prototype.last = function () {
-    return this.slice(-1, 1)
+    return this.slice(-1)[0]
 }
 Array.prototype.rest = function () {
     return this.slice(1)

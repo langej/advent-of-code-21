@@ -37,7 +37,10 @@ case $day in
         cd day-11 && node main.mjs && cd ..
         ;;
     "12")
-        cd day-12 && npm run main && cd ..
+        cd day-12 && yarn run main && cd ..
+        ;;
+    "13")
+        cd day-13 && node main.mjs && cd ..
         ;;
     *)
         echo "not yet.."
